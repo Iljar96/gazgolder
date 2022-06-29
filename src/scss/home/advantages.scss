@@ -47,9 +47,7 @@
 	// .advantages__info
 	&__info {
 		width: calc(100% - $containerPaddingMobSmall * 2);
-		padding: 5.1rem 6.7rem 5.7rem;
 		position: absolute;
-		bottom: 3rem;
 		left: $containerPaddingMobSmall;
 		z-index: 1;
 		background-color: $white;
@@ -59,11 +57,27 @@
 			left: $containerPaddingMob;
 		}
 
+		@media (min-width: $md3) {
+			@media (max-width: $md2) {
+				padding: 5.1rem 6.7rem 5.7rem;
+				bottom: 3rem;
+			}
+		}
+
 		@media (min-width: $md2) {
 			width: 100%;
 			padding: 7.5rem 10.8rem 0;
 			bottom: 0;
 			left: 0;
+		}
+
+		@media (max-width: $md3) {
+			padding: 4.1rem 3.7rem 4.7rem;
+			bottom: 1rem;
+		}
+
+		@media (max-width: $md4) {
+			padding: 3.1rem 3.7rem 3.7rem;
 		}
 	}
 
@@ -142,12 +156,26 @@
 
 	// .advantages__item
 	&__item {
-		flex: 0 0 50%;
-		width: 50%;
 		padding: 7.6rem 3rem 4.4rem;
+
+		@media (min-width: $md5) {
+			flex: 0 0 50%;
+			width: 50%;
+		}
 
 		@media (min-width: $md2) {
 			padding: 6rem 2.4rem 3.5rem;
+		}
+
+		@media (max-width: $md5) {
+			flex: 0 0 100%;
+			width: 100%;
+			padding-right: 3.7rem;
+			padding-left: 3.7rem;
+
+			&:first-child {
+				box-shadow: -.6rem 1.3rem 8.1rem 1.4rem rgba(19, 19, 19, 0.09);
+			}
 		}
 
 		&:nth-child(1) {
