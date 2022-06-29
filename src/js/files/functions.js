@@ -456,99 +456,6 @@ export function tabs() {
 		}
 	}
 }
-// Модуь работы с меню (бургер) =======================================================================================================================================================================================================================
-export function menuInit() {
-	let iconMenu = document.querySelector(".icon-menu");
-	if (iconMenu) {
-		iconMenu.addEventListener("click", function (e) {
-			if (bodyLockStatus) {
-				bodyLockToggle();
-				document.documentElement.classList.toggle("menu-open");
-			}
-		});
-	};
-}
-export function menuOpen() {
-	bodyLock();
-	document.documentElement.classList.add("menu-open");
-}
-export function menuClose() {
-	bodyUnlock();
-	document.documentElement.classList.remove("menu-open");
-}
-// Модуль "показать еще" =======================================================================================================================================================================================================================
-/*
-Документация по работе в шаблоне:
-data-showmore="size/items"
-data-showmore-content="размер/кол-во"
-data-showmore-button="скорость"
-Сниппет (HTML): showmore
-*/
-export function showMore() {
-	const showMoreBlocks = document.querySelectorAll('[data-showmore]');
-	if (showMoreBlocks.length) {
-		initItems(showMoreBlocks);
-		document.addEventListener("click", showMoreActions);
-		window.addEventListener("resize", showMoreActions);
-	}
-	function initItems(showMoreBlocks) {
-		showMoreBlocks.forEach(showMoreBlock => {
-			initItem(showMoreBlock);
-		});
-	}
-	function initItem(showMoreBlock) {
-		const showMoreContent = showMoreBlock.querySelector('[data-showmore-content]');
-		const showMoreButton = showMoreBlock.querySelector('[data-showmore-button]');
-		const hiddenHeight = getHeight(showMoreBlock, showMoreContent);
-		if (hiddenHeight < getOriginalHeight(showMoreContent)) {
-			_slideUp(showMoreContent, 0, hiddenHeight);
-			showMoreButton.hidden = false;
-		}
-	}
-	function getHeight(showMoreBlock, showMoreContent) {
-		let hiddenHeight = 0;
-		const showMoreType = showMoreBlock.dataset.showmore ? showMoreBlock.dataset.showmore : 'size';
-		if (showMoreType === 'items') {
-			const showMoreTypeValue = showMoreContent.dataset.showmoreContent ? showMoreContent.dataset.showmoreContent : 3;
-			const showMoreItems = showMoreContent.children;
-			for (let index = 1; index < showMoreItems.length; index++) {
-				const showMoreItem = showMoreItems[index - 1];
-				hiddenHeight += showMoreItem.offsetHeight;
-				if (index === showMoreTypeValue) break;
-			}
-		} else {
-			const showMoreTypeValue = showMoreContent.dataset.showmoreContent ? showMoreContent.dataset.showmoreContent : 150;
-			hiddenHeight = showMoreTypeValue;
-		}
-		return hiddenHeight;
-	}
-	function getOriginalHeight(showMoreContent) {
-		let hiddenHeight = showMoreContent.offsetHeight;
-		showMoreContent.style.removeProperty('height');
-		let originalHeight = showMoreContent.offsetHeight;
-		showMoreContent.style.height = `${hiddenHeight}px`;
-		return originalHeight;
-	}
-	function showMoreActions(e) {
-		const targetEvent = e.target;
-		const targetType = e.type;
-		if (targetType === 'click') {
-			if (targetEvent.closest('[data-showmore-button]')) {
-				const showMoreButton = targetEvent.closest('[data-showmore-button]');
-				const showMoreBlock = showMoreButton.closest('[data-showmore]');
-				const showMoreContent = showMoreBlock.querySelector('[data-showmore-content]');
-				const showMoreSpeed = showMoreBlock.dataset.showmoreButton ? showMoreBlock.dataset.showmoreButton : '500';
-				const hiddenHeight = getHeight(showMoreBlock, showMoreContent);
-				if (!showMoreContent.classList.contains('_slide')) {
-					showMoreBlock.classList.contains('_showmore-active') ? _slideUp(showMoreContent, showMoreSpeed, hiddenHeight) : _slideDown(showMoreContent, showMoreSpeed, hiddenHeight);
-					showMoreBlock.classList.toggle('_showmore-active');
-				}
-			}
-		} else if (targetType === 'resize') {
-			initItems(showMoreBlocks);
-		}
-	}
-}
 
 // Модуль попапов ===========================================================================================================================================================================================================================
 /*
@@ -561,26 +468,9 @@ data-youtube - Атрибут для кода youtube
 import { Popup } from "../libs/popup.js";
 export const initPopups = () => new Popup({});
 
-// Модуль параллакса мышью ===========================================================================================================================================================================================================================
-/*
-Документация по работе в шаблоне:
-Сниппет (HTML): 
-*/
-import { MousePRLX } from "../libs/parallax-mouse.js";
-export const initParallaxMouse = () => new MousePRLX({});
-
-//================================================================================================================================================================================================================================================================================================================
 // Прочие полезные функции ================================================================================================================================================================================================================================================================================================================
 //================================================================================================================================================================================================================================================================================================================
 
-// FLS (Full Logging System)
-export function FLS(message) {
-	setTimeout(() => {
-		if (window.FLS) {
-			console.log(message);
-		}
-	}, 0);
-}
 // Получить цифры из строки
 export function getDigFromString(item) {
 	return parseInt(item.replace(/[^\d]/g, ''))

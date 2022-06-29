@@ -1,4 +1,4 @@
-import { isMobile, bodyLockStatus, bodyLockToggle, FLS } from "../files/functions.js";
+import { isMobile, bodyLockStatus, bodyLockToggle } from "../files/functions.js";
 
 // Класс Popup
 export class Popup {
@@ -80,7 +80,6 @@ export class Popup {
 		this.options.init ? this.initPopups() : null
 	}
 	initPopups() {
-		this.popupLogging(`Проснулся`);
 		this.eventsPopup();
 	}
 	eventsPopup() {
@@ -100,7 +99,7 @@ export class Popup {
 					this.open();
 					return;
 
-				} else this.popupLogging(`Ой ой, не заполнен атрибут у ${buttonOpen.classList}`);
+				}
 
 				return;
 			}
@@ -224,9 +223,8 @@ export class Popup {
 					popup: this
 				}
 			}));
-			this.popupLogging(`Открыл попап`);
 
-		} else this.popupLogging(`Ой ой, такого попапа нет. Проверьте корректность ввода. `);
+		}
 	}
 	close(selectorValue) {
 		if (selectorValue && typeof (selectorValue) === "string" && selectorValue.trim() !== "") {
@@ -263,7 +261,6 @@ export class Popup {
 			this._focusTrap();
 		}, 50);
 
-		this.popupLogging(`Закрыл попап`);
 	}
 	// Получение хэша 
 	_getHash() {
@@ -310,9 +307,5 @@ export class Popup {
 		} else {
 			focusable[0].focus();
 		}
-	}
-	// Функция вывода в консоль
-	popupLogging(message) {
-		this.options.logging ? FLS(`[Попапос]: ${message}`) : null;
 	}
 }

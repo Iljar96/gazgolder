@@ -129,7 +129,6 @@ body.popup-show::after {
 	}
 
 	.form-block__nav-link._tab-active {
-		outline: 1px solid #c32627;
 		cursor: default;
 		color: #232323;
 	}
@@ -177,4 +176,10 @@ body.popup-show::after {
 		line-height: 6.4rem;
 	}
 
+}
+
+.popup__content--callback .form-block {
+	@media (min-width: $md2) {
+		padding: 0 3rem;
+	}
 }
