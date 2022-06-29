@@ -36,6 +36,18 @@
 		text-decoration: underline;
 		color: $red;
 		cursor: pointer;
+		text-decoration: underline dotted;
+		text-underline-offset: 0.5rem;
+
+		&:active {
+			text-decoration: none;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: none;
+			}
+		}
 
 		&._spoller-active {
 			text-decoration: none;

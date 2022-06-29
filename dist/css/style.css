@@ -225,6 +225,16 @@ body {
 }
 .form__policy label > span a {
   color: #9e9e9e;
+  text-decoration: underline dotted;
+  text-underline-offset: 0.2rem;
+}
+.form__policy label > span a:active {
+  text-decoration: none;
+}
+@media (any-hover: hover) {
+  .form__policy label > span a:hover {
+    text-decoration: none;
+  }
 }
 
 .checkbox__text {
@@ -676,7 +686,8 @@ img, .btn {
     margin-bottom: 1.1rem;
     font-size: 2.2rem;
     font-weight: 700;
-    text-decoration: underline;
+    text-decoration: underline dotted;
+    text-underline-offset: 0.3rem;
   }
   .price-list__btn:hover, .price-list__btn:active {
     text-decoration: none;
@@ -737,7 +748,8 @@ img, .btn {
 }
 .callback__btn {
   font-size: 1.7rem;
-  text-decoration: underline;
+  text-decoration: underline dotted;
+  text-underline-offset: 0.5rem;
 }
 .callback__btn:active {
   text-decoration: none;
@@ -887,6 +899,7 @@ img, .btn {
     margin-left: 2.7rem;
   }
 }
+
 @media (min-width: 991.98px) {
   .footer {
     padding: 8rem 0 11.4rem;
@@ -942,6 +955,18 @@ img, .btn {
 @media (max-width: 991.98px) {
   .footer__item:nth-child(1) {
     grid-area: link2;
+  }
+}
+.footer a {
+  text-underline-offset: 0.5rem;
+  text-decoration: underline dotted;
+}
+.footer a:active {
+  text-decoration: none;
+}
+@media (any-hover: hover) {
+  .footer a:hover {
+    text-decoration: none;
   }
 }
 
@@ -3345,6 +3370,16 @@ img, .btn {
   text-decoration: underline;
   color: #c32627;
   cursor: pointer;
+  text-decoration: underline dotted;
+  text-underline-offset: 0.5rem;
+}
+.faq__item-title:active {
+  text-decoration: none;
+}
+@media (any-hover: hover) {
+  .faq__item-title:hover {
+    text-decoration: none;
+  }
 }
 .faq__item-title._spoller-active {
   text-decoration: none;
@@ -3580,6 +3615,140 @@ img, .btn {
   top: 0;
   left: 0;
   z-index: 1;
+}
+
+.wrapper--policy .header .callback {
+  color: #232323;
+}
+
+.wrapper--policy .header {
+  position: static;
+  top: auto;
+  left: auto;
+  margin-bottom: 5rem;
+}
+
+.wrapper--policy h1,
+.wrapper--policy h2,
+.wrapper--policy h3,
+.wrapper--policy h4,
+.wrapper--policy h5,
+.wrapper--policy h6 {
+  font-weight: 700;
+}
+.wrapper--policy h1 {
+  font-size: 3.2rem;
+  margin-top: 2.114rem;
+  margin-bottom: 2.114rem;
+}
+@media (max-width: 575.98px) {
+  .wrapper--policy h1 {
+    font-size: 2.56rem;
+    margin-top: 1.6912rem;
+    margin-bottom: 1.6912rem;
+  }
+}
+.wrapper--policy h2 {
+  font-size: 2.4rem;
+  margin-top: 1.992rem;
+  margin-bottom: 1.992rem;
+}
+@media (max-width: 575.98px) {
+  .wrapper--policy h2 {
+    font-size: 1.92rem;
+    margin-top: 1.5936rem;
+    margin-bottom: 1.5936rem;
+  }
+}
+.wrapper--policy h3 {
+  font-size: 2.072rem;
+  margin-top: 2.072rem;
+  margin-bottom: 2.072rem;
+}
+@media (max-width: 575.98px) {
+  .wrapper--policy h3 {
+    font-size: 1.4976rem;
+    margin-top: 1.4976rem;
+    margin-bottom: 1.4976rem;
+  }
+}
+.wrapper--policy h4,
+.wrapper--policy p {
+  font-size: 1.7rem;
+  margin-top: 1.772rem;
+  margin-bottom: 1.772rem;
+}
+@media (max-width: 575.98px) {
+  .wrapper--policy h4,
+.wrapper--policy p {
+    font-size: 1.36rem;
+    margin-top: 1.4176rem;
+    margin-bottom: 1.4176rem;
+  }
+}
+.wrapper--policy h5 {
+  font-size: 1.328rem;
+  margin-top: 1.672rem;
+  margin-bottom: 1.672rem;
+}
+@media (max-width: 575.98px) {
+  .wrapper--policy h5 {
+    font-size: 1.0624rem;
+    margin-top: 1.3376rem;
+    margin-bottom: 1.3376rem;
+  }
+}
+.wrapper--policy h6 {
+  font-size: 1.072rem;
+  margin-top: 1.572rem;
+  margin-bottom: 1.572rem;
+}
+@media (max-width: 575.98px) {
+  .wrapper--policy h6 {
+    font-size: 0.8576rem;
+    margin-top: 1.2576rem;
+    margin-bottom: 1.2576rem;
+  }
+}
+.wrapper--policy h1,
+.wrapper--policy h2,
+.wrapper--policy h3,
+.wrapper--policy h4,
+.wrapper--policy h5,
+.wrapper--policy h6 {
+  line-height: 1.2;
+}
+.wrapper--policy p {
+  margin-top: 1.6rem;
+  margin-bottom: 1.6rem;
+}
+@media (max-width: 575.98px) {
+  .wrapper--policy p {
+    margin-top: 1.28rem;
+    margin-bottom: 1.6rem 0.8;
+  }
+}
+.wrapper--policy ul,
+.wrapper--policy ol {
+  padding-left: 2.8rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+@media (max-width: 575.98px) {
+  .wrapper--policy ul,
+.wrapper--policy ol {
+    padding-left: 2.24rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+}
+@media (max-width: 575.98px) {
+  .wrapper--policy li {
+    line-height: 1.3076923077;
+  }
+}
+.wrapper--policy mark {
+  background-color: #f3f3f3;
 }
 .swiper {
   overflow: hidden;

@@ -1,0 +1,157 @@
+.wrapper--policy .header .callback {
+	color: $mainColor;
+}
+
+.wrapper--policy .header {
+	position: static;
+	top: auto;
+	left: auto;
+	margin-bottom: 5rem;
+}
+
+.wrapper--policy {
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-weight: 700;
+	}
+
+	h1 {
+		font-size: 3.2rem;
+		margin-top: 2.114rem;
+		margin-bottom: 2.114rem;
+	}
+
+	@media (max-width: 575.98px) {
+		h1 {
+			font-size: 2.56rem;
+			margin-top: 1.6912rem;
+			margin-bottom: 1.6912rem;
+		}
+	}
+
+	h2 {
+		font-size: 2.4rem;
+		margin-top: 1.992rem;
+		margin-bottom: 1.992rem;
+	}
+
+	@media (max-width: 575.98px) {
+		h2 {
+			font-size: 1.92rem;
+			margin-top: 1.5936rem;
+			margin-bottom: 1.5936rem;
+		}
+	}
+
+	h3 {
+		font-size: 2.072rem;
+		margin-top: 2.072rem;
+		margin-bottom: 2.072rem;
+	}
+
+	@media (max-width: 575.98px) {
+		h3 {
+			font-size: 1.4976rem;
+			margin-top: 1.4976rem;
+			margin-bottom: 1.4976rem;
+		}
+	}
+
+	h4,
+	p {
+		font-size: 1.7rem;
+		margin-top: 1.772rem;
+		margin-bottom: 1.772rem;
+	}
+
+	@media (max-width: 575.98px) {
+
+		h4,
+		p {
+			font-size: 1.36rem;
+			margin-top: 1.4176rem;
+			margin-bottom: 1.4176rem;
+		}
+	}
+
+	h5 {
+		font-size: 1.328rem;
+		margin-top: 1.672rem;
+		margin-bottom: 1.672rem;
+	}
+
+	@media (max-width: 575.98px) {
+		h5 {
+			font-size: 1.0624rem;
+			margin-top: 1.3376rem;
+			margin-bottom: 1.3376rem;
+		}
+	}
+
+	h6 {
+		font-size: 1.072rem;
+		margin-top: 1.572rem;
+		margin-bottom: 1.572rem;
+	}
+
+	@media (max-width: 575.98px) {
+		h6 {
+			font-size: 0.8576rem;
+			margin-top: 1.2576rem;
+			margin-bottom: 1.2576rem;
+		}
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		line-height: 1.2;
+	}
+
+	p {
+		margin-top: 1.6rem;
+		margin-bottom: 1.6rem;
+	}
+
+	@media (max-width: 575.98px) {
+		p {
+			margin-top: 1.28rem;
+			margin-bottom: 1.6rem 0.8;
+		}
+	}
+
+	ul,
+	ol {
+		padding-left: 2.8rem;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+	}
+
+	@media (max-width: 575.98px) {
+
+		ul,
+		ol {
+			padding-left: 2.24rem;
+			margin-top: 0.8rem;
+			margin-bottom: 0.8rem;
+		}
+	}
+
+	@media (max-width: 575.98px) {
+		li {
+			line-height: 1.3076923077;
+		}
+	}
+
+	mark {
+		background-color: $grayBackground;
+	}
+}

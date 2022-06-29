@@ -59,16 +59,19 @@
 			}
 		}
 	}
-}
 
-.logo {
+	a {
+		text-underline-offset: 0.5rem;
+		text-decoration: underline dotted;
 
-	// .logo__name
-	&__name {}
+		&:active {
+			text-decoration: none;
+		}
 
-	// .logo__slogan
-	&__slogan {}
-
-	// .logo__item
-
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
 }
