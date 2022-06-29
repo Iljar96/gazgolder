@@ -1082,6 +1082,7 @@ img, .btn {
 }
 .img-slider__slide {
   position: relative;
+  background: #989898;
 }
 @media (min-width: 991.98px) {
   .img-slider__slide {

@@ -108,7 +108,13 @@ body.popup-show::after {
 	}
 
 	.form-block {
-		padding: 0 3rem 0 4.5rem;
+		@media (min-width: $md2) {
+			padding: 0 3rem 0 4.5rem;
+		}
+
+		@media (max-width: $md2) {
+			padding: 0 3rem;
+		}
 	}
 
 	.form-block__title {

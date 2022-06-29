@@ -7432,7 +7432,7 @@
           t.on("slideChange", (e) => {
             const t = e.el.querySelector(`[data-slide-id="${e.activeIndex}"]`);
             t.querySelector(".swiper-initialized") ||
-              (t.removeAttribute("inert"), s(e.activeIndex));
+              (t.removeAttribute("aria-hidden"), s(e.activeIndex));
           });
       })();
     });

@@ -180,7 +180,7 @@ const initAllSliders = () => {
 		const targetSlide = e.el.querySelector(`[data-slide-id="${e.activeIndex}"]`);
 		const isInitialized = targetSlide.querySelector('.swiper-initialized');
 		if (!isInitialized) {
-			targetSlide.removeAttribute('inert');
+			targetSlide.removeAttribute('aria-hidden');
 			initGallerySliders(e.activeIndex);
 		}
 	}
