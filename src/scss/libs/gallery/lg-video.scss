@@ -7,10 +7,15 @@
 		display: inline-block;
 		vertical-align: middle;
 		position: relative;
+		height: 0 !important;
+		padding-bottom: 56.25%;
 
 		.lg-object {
 			width: 100% !important;
 			height: 100% !important;
+			position: absolute;
+			top: 0;
+			left: 0;
 		}
 	}
 

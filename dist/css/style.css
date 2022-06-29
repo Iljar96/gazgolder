@@ -3008,14 +3008,24 @@ img, .btn {
 [data-iframe] .single-slider__video-play::before {
   content: "";
   display: block;
-  width: 25.3rem;
-  height: 25.3rem;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background: url("../img/icons/play.png") center no-repeat;
   background-size: contain;
+}
+@media (min-width: 767.98px) {
+  [data-iframe] .single-slider__video-play::before {
+    width: 25.3rem;
+    height: 25.3rem;
+  }
+}
+@media (max-width: 767.98px) {
+  [data-iframe] .single-slider__video-play::before {
+    width: 17.3rem;
+    height: 17.3rem;
+  }
 }
 
 .refueling {
@@ -4246,10 +4256,15 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   display: inline-block;
   vertical-align: middle;
   position: relative;
+  height: 0 !important;
+  padding-bottom: 56.25%;
 }
 .lg-outer .lg-video-cont .lg-object {
   width: 100% !important;
   height: 100% !important;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .lg-outer .lg-has-iframe .lg-video-cont {
   -webkit-overflow-scrolling: touch;
