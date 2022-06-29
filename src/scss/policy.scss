@@ -7,7 +7,14 @@
 	position: static;
 	top: auto;
 	left: auto;
-	margin-bottom: 5rem;
+
+	@media (min-width: $md2) {
+		margin-bottom: 5rem;
+	}
+
+	@media (max-width: $md2) {
+		margin-bottom: 2rem;
+	}
 }
 
 .wrapper--policy {
@@ -22,90 +29,40 @@
 	}
 
 	h1 {
-		font-size: 3.2rem;
+		font-size: 3.5rem;
 		margin-top: 2.114rem;
 		margin-bottom: 2.114rem;
 	}
 
-	@media (max-width: 575.98px) {
-		h1 {
-			font-size: 2.56rem;
-			margin-top: 1.6912rem;
-			margin-bottom: 1.6912rem;
-		}
-	}
-
 	h2 {
-		font-size: 2.4rem;
+		font-size: 3rem;
 		margin-top: 1.992rem;
 		margin-bottom: 1.992rem;
 	}
 
-	@media (max-width: 575.98px) {
-		h2 {
-			font-size: 1.92rem;
-			margin-top: 1.5936rem;
-			margin-bottom: 1.5936rem;
-		}
-	}
-
 	h3 {
-		font-size: 2.072rem;
+		font-size: 2.4rem;
 		margin-top: 2.072rem;
 		margin-bottom: 2.072rem;
 	}
 
-	@media (max-width: 575.98px) {
-		h3 {
-			font-size: 1.4976rem;
-			margin-top: 1.4976rem;
-			margin-bottom: 1.4976rem;
-		}
-	}
-
 	h4,
 	p {
-		font-size: 1.7rem;
+		font-size: 2rem;
 		margin-top: 1.772rem;
 		margin-bottom: 1.772rem;
 	}
 
-	@media (max-width: 575.98px) {
-
-		h4,
-		p {
-			font-size: 1.36rem;
-			margin-top: 1.4176rem;
-			margin-bottom: 1.4176rem;
-		}
-	}
-
 	h5 {
-		font-size: 1.328rem;
+		font-size: 1.5rem;
 		margin-top: 1.672rem;
 		margin-bottom: 1.672rem;
 	}
 
-	@media (max-width: 575.98px) {
-		h5 {
-			font-size: 1.0624rem;
-			margin-top: 1.3376rem;
-			margin-bottom: 1.3376rem;
-		}
-	}
-
 	h6 {
-		font-size: 1.072rem;
+		font-size: 1.4rem;
 		margin-top: 1.572rem;
 		margin-bottom: 1.572rem;
-	}
-
-	@media (max-width: 575.98px) {
-		h6 {
-			font-size: 0.8576rem;
-			margin-top: 1.2576rem;
-			margin-bottom: 1.2576rem;
-		}
 	}
 
 	h1,
@@ -122,34 +79,11 @@
 		margin-bottom: 1.6rem;
 	}
 
-	@media (max-width: 575.98px) {
-		p {
-			margin-top: 1.28rem;
-			margin-bottom: 1.6rem 0.8;
-		}
-	}
-
 	ul,
 	ol {
 		padding-left: 2.8rem;
 		margin-top: 1rem;
 		margin-bottom: 1rem;
-	}
-
-	@media (max-width: 575.98px) {
-
-		ul,
-		ol {
-			padding-left: 2.24rem;
-			margin-top: 0.8rem;
-			margin-bottom: 0.8rem;
-		}
-	}
-
-	@media (max-width: 575.98px) {
-		li {
-			line-height: 1.3076923077;
-		}
 	}
 
 	mark {

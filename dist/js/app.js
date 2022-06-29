@@ -7328,14 +7328,16 @@
                   thumbs: { swiper: t },
                 });
           },
-          i = document.querySelectorAll(".cases__slide");
-        i.length > 0 && i.forEach((e, t) => (e.dataset.slideId = t)),
-          s("0"),
-          t.on("slideChange", (e) => {
+          i = document.querySelectorAll(".cases__slide"),
+          n = (e) => {
             const t = e.el.querySelector(`[data-slide-id="${e.activeIndex}"]`);
             t.querySelector(".swiper-initialized") ||
               (t.removeAttribute("aria-hidden"), s(e.activeIndex));
-          });
+          };
+        i.length > 0 &&
+          (i.forEach((e, t) => (e.dataset.slideId = t)),
+          s("0"),
+          t.on("slideChange", n));
       })();
     });
     new (s(732))({

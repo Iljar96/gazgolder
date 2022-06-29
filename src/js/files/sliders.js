@@ -172,10 +172,6 @@ const initAllSliders = () => {
 
 	const casesSlides = document.querySelectorAll('.cases__slide');
 
-	if (casesSlides.length > 0) {
-		casesSlides.forEach((slide, i) => slide.dataset.slideId = i);
-	}
-
 	const onSlideChange = e => {
 		const targetSlide = e.el.querySelector(`[data-slide-id="${e.activeIndex}"]`);
 		const isInitialized = targetSlide.querySelector('.swiper-initialized');
@@ -185,8 +181,11 @@ const initAllSliders = () => {
 		}
 	}
 
-	initGallerySliders('0');
-	casesSlider.on('slideChange', onSlideChange);
+	if (casesSlides.length > 0) {
+		casesSlides.forEach((slide, i) => slide.dataset.slideId = i);
+		initGallerySliders('0');
+		casesSlider.on('slideChange', onSlideChange);
+	}
 }
 
 window.addEventListener("load", function (e) {
