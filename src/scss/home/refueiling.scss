@@ -82,6 +82,11 @@
 			font-size: 1.7rem;
 		}
 
+		@media (max-width: $md5) {
+			margin-top: 1.5rem;
+			font-size: 1.5rem;
+		}
+
 		&::before {
 			content: '';
 			display: block;
@@ -104,6 +109,20 @@
 				bottom: -.6rem;
 				left: -7.4rem;
 			}
+
+			@media (max-width: $md5) {
+				width: 6.9rem;
+				height: 8.4rem;
+				bottom: -8.6rem;
+				left: -7.4rem;
+				transform: rotate(-11deg);
+			}
+		}
+	}
+
+	&__price-btn {
+		@media (max-width: $md5) {
+			padding: 0 3rem;
 		}
 	}
 }

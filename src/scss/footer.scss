@@ -61,17 +61,6 @@
 	}
 
 	a {
-		text-underline-offset: 0.5rem;
-		text-decoration: underline dotted;
-
-		&:active {
-			text-decoration: none;
-		}
-
-		@media (any-hover: hover) {
-			&:hover {
-				text-decoration: none;
-			}
-		}
+		text-underline-offset: 0.2rem;
 	}
 }

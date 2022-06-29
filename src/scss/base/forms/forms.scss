@@ -63,18 +63,8 @@
 
 			a {
 				color: #9e9e9e;
-				text-decoration: underline dotted;
 				text-underline-offset: 0.2rem;
 
-				&:active {
-					text-decoration: none;
-				}
-
-				@media (any-hover: hover) {
-					&:hover {
-						text-decoration: none;
-					}
-				}
 			}
 		}
 	}
@@ -106,3 +96,7 @@
 // <SELECT>
 // Снипет (HTML): sel
 @import "select";
+
+input {
+	outline: none !important;
+}
