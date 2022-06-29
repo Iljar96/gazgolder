@@ -3617,7 +3617,8 @@ img, .btn {
   z-index: 1;
 }
 
-.wrapper--policy .header .callback {
+.wrapper--policy .header .callback,
+.wrapper--policy .header .social__text {
   color: #232323;
 }
 
