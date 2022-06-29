@@ -1,0 +1,167 @@
+body::after {
+	content: "";
+	background-color: rgba(0, 0, 0, 0.9);
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: opacity 0.8s ease 0s;
+	pointer-events: none;
+	z-index: 149;
+}
+
+body.popup-show::after {
+	opacity: 1;
+}
+
+.popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 100;
+	padding: 30px 10px;
+	transition: visibility 0.8s ease 0s;
+	visibility: hidden;
+	z-index: 150;
+	pointer-events: none;
+}
+
+.popup_show {
+	visibility: visible;
+	overflow: auto;
+	pointer-events: auto;
+}
+
+.popup_show .popup__content {
+	visibility: visible;
+	transform: scale(1);
+}
+
+.popup__wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 100%;
+	flex: 1 1 auto;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.popup__content {
+	visibility: hidden;
+	transform: scale(0);
+	transition: transform 0.3s ease 0s;
+	background-color: $white;
+	width: 100%;
+	border-radius: 0;
+	position: relative;
+
+	@media (min-width: $md2) {
+		max-width: 93rem;
+	}
+
+	@media (max-width: $md2) {
+		max-width: 52rem;
+	}
+
+	&--callback {
+		max-width: 47rem;
+		padding: 9rem 0;
+	}
+
+	.lock & {
+		visibility: visible;
+	}
+}
+
+
+.popup__close {
+	display: block;
+	width: 1.7rem;
+	height: 1.7rem;
+	position: absolute;
+	top: 2.8rem;
+	right: 3.3rem;
+	font-size: 0;
+	color: transparent;
+	background: url(../img/icons/close.png) center no-repeat;
+	background-size: contain;
+}
+
+.popup {
+
+	&__col-ibg {
+
+		@media (max-width: $md2) {
+			display: none;
+		}
+	}
+
+	&__form {
+		padding: 5rem 2rem;
+	}
+
+	.form-block {
+		padding: 0 3rem 0 4.5rem;
+	}
+
+	.form-block__title {
+		font-size: 2.5rem;
+	}
+
+	.form-block__nav-link._tab-active {
+		outline: 1px solid #c32627;
+		cursor: default;
+		color: #232323;
+	}
+
+	.form-block__nav-link {
+		height: 3.8rem;
+		margin-right: 1.5rem;
+		padding: 0px 1.9rem;
+		line-height: 3.8rem;
+		border-radius: 1.9rem;
+		font-size: 1.4rem;
+	}
+
+	.form-block__nav {
+		margin: 0 0 2.9rem;
+	}
+
+	.form__input {
+		margin-bottom: 4.3rem;
+
+		input {
+			padding: 1.1rem 2rem;
+			font-size: 1.6rem;
+		}
+	}
+
+	.form__footer {
+		flex-direction: column-reverse;
+		align-items: flex-end;
+	}
+
+	.form__policy {
+		width: 100%;
+		margin-bottom: 5rem;
+
+		label>span {
+			max-width: 100%;
+		}
+	}
+
+	.form__btn-wrapper .btn {
+		height: 6.4rem;
+		padding: 0 4rem;
+		font-size: 1.8rem;
+		line-height: 6.4rem;
+	}
+
+}

@@ -1,0 +1,267 @@
+.gazgolder {
+	margin-bottom: 16rem;
+
+	@media (min-width: $md4) {
+		@media (max-width: $md2) {
+			margin-bottom: 18rem;
+		}
+	}
+
+	@media (min-width: $md2) {
+		margin-bottom: 22.8rem;
+	}
+
+	// .gazgolder__conatainer
+	&__conatainer {}
+
+	// .gazgolder__title
+	&__title {
+		margin-bottom: 4.2rem;
+
+		@media (min-width: $md2) {
+			margin-bottom: 4.9rem;
+		}
+	}
+
+	// .gazgolder__info
+	&__info {
+		margin-bottom: 6rem;
+		font-size: 2.4rem;
+		line-height: math.div(35, 24);
+	}
+
+	// .gazgolder__brands
+	&__brands {
+		margin-bottom: 10.5rem;
+
+		img {
+			width: 100%;
+			max-width: 100%;
+		}
+	}
+
+	// .gazgolder__main
+	&__main {
+		margin-bottom: 10.6rem;
+		position: relative;
+
+		@media (min-width: $md2) {
+			margin-bottom: 8.4rem;
+
+		}
+
+		>img,
+		picture img {
+			width: 100%;
+			max-width: 100%;
+
+			@media (max-width: $md2) {
+				margin-bottom: 7rem;
+			}
+		}
+	}
+
+	// .gazgolder__items
+	&__items {
+		@media (max-width: $md2) {
+			display: grid;
+			gap: 8.3rem;
+		}
+	}
+
+	// .gazgolder__item
+	&__item {
+		&:nth-child(1) {
+			.gazgolder__icon img {
+				width: 4rem;
+			}
+		}
+
+		&:nth-child(2) {
+			.gazgolder__icon img {
+				width: 4.2rem;
+			}
+
+		}
+
+		&:nth-child(3) {
+			.gazgolder__icon img {
+				width: 3.9rem;
+			}
+
+		}
+
+		&:nth-child(4) {
+			.gazgolder__icon img {
+				width: 2.9rem;
+			}
+		}
+
+		&:nth-child(5) {
+			.gazgolder__icon img {
+				width: 4rem;
+			}
+		}
+
+		@media (min-width: $md2) {
+			width: 7rem;
+			height: 7rem;
+			position: absolute;
+
+			&:nth-child(1) {
+				top: 17.8rem;
+				left: 10.1rem;
+			}
+
+			&:nth-child(2) {
+				top: 1rem;
+				left: 38rem;
+			}
+
+			&:nth-child(3) {
+				top: 26.3rem;
+				left: 67.9rem;
+			}
+
+			&:nth-child(4) {
+				top: 4rem;
+				left: 82.5rem;
+			}
+
+			&:nth-child(5) {
+				top: 9.4rem;
+				right: 13.9rem;
+			}
+		}
+
+		@media (max-width: $md2) {
+			display: grid;
+			grid-template-columns: 9.8rem auto;
+			align-items: center;
+			gap: 3.3rem;
+		}
+	}
+
+	// .gazgolder__icon
+	&__icon {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 9.8rem;
+		height: 9.8rem;
+		animation: pulse 3s infinite;
+		border-radius: 50%;
+		box-shadow: 0 0 0 rgb(203 39 40/ 40%);
+		background-color: $redSecondary;
+
+		@media (min-width: $md2) {
+			width: 7rem;
+			height: 7rem;
+			cursor: pointer;
+		}
+
+		img {
+			max-width: 100%;
+			object-fit: contain;
+
+			@media (max-width: $md2) {
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+
+	&__item-content {
+
+		background: $white;
+
+		@media (min-width: $md2) {
+			width: 41.3rem;
+			padding: 5.3rem 4.3rem;
+			position: absolute;
+			top: 9rem;
+			left: 50%;
+			z-index: 2;
+			transform: translate(-50%, 0);
+			box-shadow: -.6rem 1.3rem 8.1rem 1.4rem rgba(19, 19, 19, 0.09);
+			border-radius: 1rem;
+			transition: opacity 0.5s ease, visibility 0.5s ease;
+			opacity: 0;
+			visibility: hidden;
+
+			.gazgolder__item:hover & {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+
+	// .gazgolder__item-title
+	&__item-title {
+		margin-bottom: 1.7rem;
+		font-size: 2.4rem;
+		line-height: math.div(27, 24);
+		font-weight: 700;
+	}
+
+	// .gazgolder__item-description
+	&__item-description {
+		line-height: math.div(26, 21);
+	}
+
+	// .gazgolder__form
+	&__form {
+		@media (max-width: $md2) {
+			padding: 8.3rem 0 7.4rem;
+			background-color: $grayBackground;
+		}
+	}
+
+	&__form-wrapper {
+		@media (min-width: $md2) {
+			display: flex;
+			align-items: center;
+		}
+
+		@media (max-width: $md2) {
+			max-width: max-content;
+			margin: 0 auto;
+		}
+	}
+
+	// .gazgolder__select-item
+	&__select-item {
+		display: flex;
+		align-items: center;
+
+		@media (min-width: $md2) {
+			margin-right: 9.5rem;
+		}
+
+		@media (max-width: $md2) {
+			margin-bottom: 2.6rem;
+
+			&:last-of-type {
+				margin-bottom: 5.7rem;
+			}
+		}
+	}
+
+	&__select-number {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 4.4rem;
+		height: 4.4rem;
+		margin-right: 1.8rem;
+		font-size: 2rem;
+		border-radius: 50%;
+		border: 1px solid $redSecondary;
+
+		@media (min-width: $md2) {
+			margin-right: 2.7rem;
+
+		}
+	}
+
+}
