@@ -72,6 +72,10 @@ $md5: 479.98px;
 :root {
 	font-size: 10px;
 
+	@media (min-width:1920.98px) {
+		@include adaptiv-value("font-size", 9.55, 0, 3);
+	}
+
 	@media (max-width: 1919.98px) {
 		@media (min-width: $md1) {
 			@include adaptiv-value-to("font-size", 10, 6.666, 1279.98);

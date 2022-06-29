@@ -103,6 +103,11 @@ h6 {
 :root {
   font-size: 10px;
 }
+@media (min-width: 1920.98px) {
+  :root {
+    font-size: calc(0px + 9.55 * ((100vw - 320px) / 1600));
+  }
+}
 @media (max-width: 1919.98px) and (min-width: 1279.98px) and (min-width: 1279.98px) {
   :root {
     font-size: calc(6.666px + 3.334 * (((100vw - 1279.98px)) / ((640.02))));
