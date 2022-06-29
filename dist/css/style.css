@@ -31,8 +31,15 @@
   box-sizing: border-box;
 }
 
-*:focus {
-  outline-color: #c32627;
+@media (min-width: 767.98px) {
+  *:focus {
+    outline-color: #c32627;
+  }
+}
+@media (max-width: 767.98px) {
+  *:focus {
+    outline-color: transparent;
+  }
 }
 
 html,
@@ -96,19 +103,19 @@ h6 {
 :root {
   font-size: 10px;
 }
-@media (max-width: 1919.98px) and (min-width: 1279.98px) {
+@media (max-width: 1919.98px) and (min-width: 1279.98px) and (min-width: 1279.98px) {
   :root {
     font-size: calc(6.666px + 3.334 * (((100vw - 1279.98px)) / ((640.02))));
   }
 }
-@media (max-width: 1279.98px) and (min-width: 991.98px) {
+@media (max-width: 1279.98px) and (min-width: 767.98px) and (min-width: 991.98px) {
   :root {
     font-size: calc(6.666px + 3.334 * (((100vw - 991.98px)) / ((928.02))));
   }
 }
 @media (max-width: 767.98px) and (min-width: 319.98px) {
   :root {
-    font-size: calc(5px + 18 * (((100vw - 319.98px)) / ((1600.02))));
+    font-size: calc(6px + 17 * (((100vw - 319.98px)) / ((1600.02))));
   }
 }
 @media (max-width: 319.98px) {
@@ -506,8 +513,15 @@ body.popup-show::after {
 .popup__form {
   padding: 5rem 2rem;
 }
-.popup .form-block {
-  padding: 0 3rem 0 4.5rem;
+@media (min-width: 991.98px) {
+  .popup .form-block {
+    padding: 0 3rem 0 4.5rem;
+  }
+}
+@media (max-width: 991.98px) {
+  .popup .form-block {
+    padding: 0 3rem;
+  }
 }
 .popup .form-block__title {
   font-size: 2.5rem;
@@ -521,7 +535,7 @@ body.popup-show::after {
   height: 3.8rem;
   margin-right: 1.5rem;
   padding: 0px 1.9rem;
-  line-height: 3.8rem;
+  line-height: 4.3rem;
   border-radius: 1.9rem;
   font-size: 1.4rem;
 }
@@ -1188,6 +1202,7 @@ img, .btn {
 }
 .advantages__img {
   width: 100%;
+  max-width: 100%;
   object-fit: contain;
 }
 @media (min-width: 991.98px) {
@@ -2202,6 +2217,7 @@ img, .btn {
     margin-bottom: 4.6rem;
   }
 }
+
 .slider-about {
   position: relative;
   overflow: hidden;
@@ -2644,6 +2660,7 @@ img, .btn {
   position: relative;
   top: 0.9rem;
 }
+
 .safety__title,
 .safety__equipment {
   padding: 0 15px;
@@ -3068,6 +3085,7 @@ img, .btn {
     left: -7.4rem;
   }
 }
+
 @media (min-width: 991.98px) {
   .maintenance {
     margin-bottom: 18.4rem;

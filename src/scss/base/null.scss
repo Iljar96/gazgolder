@@ -11,7 +11,13 @@
 }
 
 *:focus {
-	outline-color: $red;
+	@media (min-width: $md3) {
+		outline-color: $red;
+	}
+
+	@media (max-width: $md3) {
+		outline-color: transparent;
+	}
 }
 
 html,

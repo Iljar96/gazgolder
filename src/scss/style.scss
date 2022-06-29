@@ -73,15 +73,19 @@ $md5: 479.98px;
 	font-size: 10px;
 
 	@media (max-width: 1919.98px) {
-		@include adaptiv-value-to("font-size", 10, 6.666, 1279.98);
+		@media (min-width: $md1) {
+			@include adaptiv-value-to("font-size", 10, 6.666, 1279.98);
+		}
 	}
 
 	@media (max-width: $md1) {
-		@include adaptiv-value-to("font-size", 10, 6.666, 991.98);
+		@media (min-width: $md3) {
+			@include adaptiv-value-to("font-size", 10, 6.666, 991.98);
+		}
 	}
 
 	@media (max-width: $md3) {
-		@include adaptiv-value-to("font-size", 23, 5, 319.98);
+		@include adaptiv-value-to("font-size", 23, 6, 319.98);
 	}
 
 	@media (max-width: 319.98px) {
