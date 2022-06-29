@@ -22,13 +22,13 @@
 		@media (max-width: $md2) {
 			gap: 3rem;
 
-			@media (min-width: 360px) {
+			@media (min-width: $md5) {
 				grid-template-areas: 'logo link1'
 					'logo link2';
 			}
 		}
 
-		@media (max-width: 360px) {
+		@media (max-width: $md5) {
 			grid-template-areas: 'logo''link1''link2'
 		}
 	}

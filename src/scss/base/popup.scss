@@ -71,7 +71,14 @@ body.popup-show::after {
 	}
 
 	&--callback {
-		max-width: 47rem;
+		@media (min-width: $md2) {
+			max-width: 47rem;
+		}
+
+		@media (max-width: $md2) {
+			max-width: 47rem;
+		}
+
 		padding: 9rem 0;
 	}
 
@@ -130,7 +137,7 @@ body.popup-show::after {
 	.form-block__nav-link {
 		height: 3.8rem;
 		margin-right: 1.5rem;
-		padding: 0px 1.9rem;
+		padding: 0px 1.5rem;
 		line-height: 4.3rem;
 		border-radius: 1.9rem;
 		font-size: 1.4rem;

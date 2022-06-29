@@ -9861,7 +9861,7 @@
                     a = t.filter(function (e) {
                       if (e.value === o) return !0;
                     });
-                  n.addEventListener("change", function () {
+                  n.addListener(function () {
                     s(a, n);
                   }),
                     s(a, n);
